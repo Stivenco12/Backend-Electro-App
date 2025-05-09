@@ -16,6 +16,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Null;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -33,6 +34,7 @@ public class Country {
     private Long id;
 
     @ExistsByCountryName	
+    @Null(message = "Country name must be null")
     @Column(length = 50, nullable = false)
     private String name;
 
