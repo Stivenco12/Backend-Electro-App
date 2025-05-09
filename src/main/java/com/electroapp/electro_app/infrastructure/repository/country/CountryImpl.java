@@ -2,11 +2,9 @@ package com.electroapp.electro_app.infrastructure.repository.country;
 
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.electroapp.electro_app.application.services.ICountryService;
 import com.electroapp.electro_app.domain.entities.Country;
 
@@ -52,7 +50,8 @@ public class CountryImpl implements ICountryService {
     }
 
     @Override
-    public boolean existsByCountryname(String countryname) {
-        return repository.existsByCountryName(countryname);
+    public boolean existsByCountryname(String CountryName) {
+        return repository.existsByName(CountryName);
     }
+
 }
