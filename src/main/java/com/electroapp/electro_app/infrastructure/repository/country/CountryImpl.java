@@ -55,7 +55,4 @@ public class CountryImpl implements ICountryService {
     public boolean existsByCountryname(String countryname) {
         return repository.existsByCountryName(countryname);
     }
-
-
-
 }
